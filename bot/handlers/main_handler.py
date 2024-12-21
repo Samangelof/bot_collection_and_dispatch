@@ -7,10 +7,10 @@ from aiogram.types import (
     ReplyKeyboardRemove
 )
 from database.sqlite_db import DatabaseManager
-from bot.states.all_states import GeneralStates, ConfirmedRequestStates, UnconfirmedRequestStates
-from bot.utils.send_chat import send_request_to_chat
+from bot.states.all_states import GeneralStates
 from bot.utils.logger import log_info, log_error
 from bot.handlers.confirmed_handler import process_confirmed_request
+from bot.handlers.unconfirmed_handler import process_unconfirmed_request
 
 
 # ===============================================================================
@@ -196,7 +196,7 @@ async def process_client_age(message: types.Message, state: FSMContext, db: Data
     """Обработка ввода возраста клиента."""
     # == Вернуться назад ==
     if message.text == "Назад":
-        await message.answer("**Вы вернулись к вводу имени клиента.**")
+        await message.answer("== Вы вернулись к вводу имени клиента. ==")
         await GeneralStates.WAITING_FOR_CLIENT_NAME.set()
         keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
         keyboard.add(KeyboardButton("Назад"))
@@ -262,7 +262,8 @@ async def process_procedure_date(message: types.Message, state: FSMContext, db: 
         return
     # == Вернуться назад ==
 
-    procedure_date = message.text  # Проверку на формат даты можно сделать позже
+    # Здесь можно сделать проверку на формат даты
+    procedure_date = message.text
     await state.update_data(procedure_date=procedure_date)
 
     await message.answer(f"Введите время процедуры:")
@@ -296,7 +297,6 @@ async def process_procedure_time(message: types.Message, state: FSMContext, db: 
     await GeneralStates.WAITING_FOR_CLIENT_PHONE.set()
 
 
-
 # ========================================================================
 # == Номер телефона клиента ==
 async def process_client_phone(message: types.Message, state: FSMContext, db: DatabaseManager):
@@ -306,7 +306,7 @@ async def process_client_phone(message: types.Message, state: FSMContext, db: Da
 
     # == Вернуться назад ==
     if message.text == "Назад":
-        await message.answer("**Вы вернулись к вводу времени процедуры.**")
+        await message.answer("== Вы вернулись к вводу времени процедуры ==")
         await GeneralStates.WAITING_FOR_PROCEDURE_TIME.set()
         keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
         keyboard.add(KeyboardButton("Назад"))
@@ -325,9 +325,40 @@ async def process_client_phone(message: types.Message, state: FSMContext, db: Da
     request_type = request_data.get("request_type")
 
     if request_type == "Подтвержденная":
-        # await message.answer(f"Заявка подтверждена. Все вопросы завершены.")
         await process_confirmed_request(message, state, db)
 
     else:  # "Не готовая"
-        await message.answer(f"Заявка не готова. Пожалуйста, следуйте дальше.")
-        await UnconfirmedRequestStates.WAITING_FOR_ADDITIONAL_INFO.set()
+        await process_unconfirmed_request(message, state, db)
+
+
+# ========================================================================
+# == Новая заявка ==
+async def restart_command(message: types.Message, state: FSMContext, db: DatabaseManager):
+    """Обработчик команды /restart для сброса состояния и возврата к выбору языка"""
+    current_state = await state.get_state()
+    log_info(f'restart_command={current_state}')
+    if current_state:
+        await state.finish()
+
+    text_new_request = "🔄 Новая заявка. Процесс запущен. Давайте начнем!"
+    
+    await message.answer(text_new_request)
+    
+    
+    users = db.get_managers()
+    if not users:
+        log_info("Список пользователей пуст!")
+        await message.answer("Список менеджеров пуст. Обратитесь к администратору.")
+        return
+
+    keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
+    for user in users:
+        keyboard.add(KeyboardButton(user["name"]))
+
+    await message.answer(
+        "Выберите свое имя:",
+        reply_markup=keyboard
+    )
+
+
+    await GeneralStates.WAITING_FOR_SELECT_NAME.set()

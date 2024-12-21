@@ -15,6 +15,7 @@ class GeneralStates(StatesGroup):
     WAITING_FOR_PROCEDURE_TIME = State()
     WAITING_FOR_CLIENT_PHONE = State()
 
+
 class ConfirmedRequestStates(StatesGroup):
     """Состояния для подтвержденной заявки"""
     WAITING_FOR_CONFIRMATION_ANSWER = State()
@@ -24,7 +25,12 @@ class ConfirmedRequestStates(StatesGroup):
 
 
 class UnconfirmedRequestStates(StatesGroup):
-    pass
+    """Состояния для неподтвержденной заявки"""
+    WAITING_FOR_LANGUAGE_CHOICE = State()
+    WAITING_FOR_INITIAL_RESPONSE = State()
+    WAITING_FOR_OBJECTION_RESPONSE = State()
+    WAITING_FOR_FINAL_CONFIRMATION = State()
+    WAITING_FOR_REJECTION_REASON = State()
 
 # State for admin
 class AdminStates(StatesGroup):

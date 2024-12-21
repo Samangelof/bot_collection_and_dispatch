@@ -18,9 +18,7 @@ from bot.utils.logger import log_info
 async def process_confirmed_request(message: types.Message, state: FSMContext, db: DatabaseManager):
     """Обработка подтвержденной заявки."""
 
-    # Получаем данные из состояния
     request_data = await state.get_data()
-    # Формируем текст сообщения для подтверждения записи
     manager_name = await get_manager_name(request_data.get('manager_id'), db)
     procedure_name = request_data.get('procedure_name')
     procedure_date = request_data.get('procedure_date')
@@ -31,15 +29,12 @@ async def process_confirmed_request(message: types.Message, state: FSMContext, d
         f"Вы записались на {procedure_name} через нашу рекламу. Подтверждаю вашу запись на {procedure_date} в {procedure_time}. Все верно?"
     )
 
-    # Клавиатура с кнопками "Да" и "Нет"
     keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
     keyboard.add(KeyboardButton("Да"))
     keyboard.add(KeyboardButton("Нет"))
 
-    # Отправляем сообщение пользователю
     await message.answer(request_text, reply_markup=keyboard)
 
-    # # Переводим в состояние ожидания ответа
     await ConfirmedRequestStates.WAITING_FOR_CONFIRMATION_ANSWER.set()
 
 
@@ -65,15 +60,31 @@ async def process_confirmation_answer(message: types.Message, state: FSMContext,
         )
         await message.answer(confirmation_text, reply_markup=keyboard)
 
-
-        new_req_for_manager = (
-            f"✅ Отлично! Клиент подтвердил запись на {procedure_date} в {procedure_time}.\n"
-            "Можете создать новую заявку нажав кнопку 'Новая заявка'"
+        request_data = await state.get_data()
+        db.update_request(
+            request_id=request_data.get("request_id"),
+            salon=request_data.get("salon_name"),
+            request_type=request_data.get("request_type"),
+            client_name=request_data.get("client_name"),
+            client_age=request_data.get("client_age"),
+            procedure_name=request_data.get("procedure_name"),
+            procedure_date=request_data.get("procedure_date"),
+            procedure_time=request_data.get("procedure_time"),
+            client_phone=request_data.get("client_phone"),
+            rejection_reason=request_data.get("rejection_reason")
         )
-        
+
+        await send_request_to_chat(request_data, db)
+
         keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
         keyboard.add(KeyboardButton("Новая заявка"))
-        await message.answer(new_req_for_manager, reply_markup=keyboard)
+        
+        await message.answer(
+            "✅ Причина отказа сохранена.\n"
+            "Можете создать новую заявку.",
+            reply_markup=keyboard
+        )
+    
         await state.finish()
 
 

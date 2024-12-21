@@ -1,0 +1,408 @@
+2024-12-21 01:11:55,544 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x0000022AC31B9810>
+2024-12-21 01:12:11,504 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x00000188B64498A0>
+2024-12-21 01:12:11,509 - INFO - Start polling.
+2024-12-21 01:12:24,512 - INFO - process_salon_selection_data={"message_id": 6937, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734732744, "text": "uj"}
+2024-12-21 01:14:43,238 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x00000227D45697B0>
+2024-12-21 01:14:43,243 - INFO - Start polling.
+2024-12-21 01:14:51,120 - INFO - restart_command=None
+2024-12-21 01:27:41,698 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x0000021DFA399840>
+2024-12-21 01:27:41,702 - INFO - Start polling.
+2024-12-21 01:27:59,720 - INFO - restart_command=None
+2024-12-21 01:28:02,420 - INFO - process_manager_name_data={"message_id": 6944, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734733682, "text": "Самангелоф"}
+2024-12-21 01:28:04,218 - INFO - process_salon_selection_data={"message_id": 6946, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734733684, "text": "Fashiontv Studio"}
+2024-12-21 01:28:04,219 - INFO - Выбран салон: Fashiontv Studio. Продолжаем...
+2024-12-21 01:28:07,236 - INFO - process_request_type_selection_data={"message_id": 6948, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734733687, "text": "Не готовая"}
+2024-12-21 01:28:07,237 - INFO - Выбран тип заявки: Не готовая. Продолжаем...
+2024-12-21 01:28:19,485 - INFO - [FINAL] process_client_phone={'request_id': 3, 'manager_id': 3, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': 'rfdsfe2', 'client_age': 23, 'procedure_name': 'dfdsf', 'procedure_date': 'e2', 'procedure_time': 'ewf'}
+2024-12-21 01:28:19,618 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-55' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py:406> exception=AttributeError("type object 'UnconfirmedRequestStates' has no attribute 'WAITING_FOR_ADDITIONAL_INFO'")>
+Traceback (most recent call last):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 414, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 236, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 257, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Samangelof\Desktop\collection_dispatch\bot\handlers\main_handler.py", line 333, in process_client_phone
+    await UnconfirmedRequestStates.WAITING_FOR_ADDITIONAL_INFO.set()
+AttributeError: type object 'UnconfirmedRequestStates' has no attribute 'WAITING_FOR_ADDITIONAL_INFO'
+2024-12-21 01:28:23,856 - INFO - [FINAL] process_client_phone={'request_id': 3, 'manager_id': 3, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': 'rfdsfe2', 'client_age': 23, 'procedure_name': 'dfdsf', 'procedure_date': 'e2', 'procedure_time': 'ewf', 'client_phone': 'w2324'}
+2024-12-21 01:28:34,130 - INFO - [FINAL] process_client_phone={'request_id': 3, 'manager_id': 3, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': 'rfdsfe2', 'client_age': 23, 'procedure_name': 'dfdsf', 'procedure_date': 'e2', 'procedure_time': 'новая заявка', 'client_phone': 'w2324'}
+2024-12-21 01:28:34,271 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-68' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py:406> exception=AttributeError("type object 'UnconfirmedRequestStates' has no attribute 'WAITING_FOR_ADDITIONAL_INFO'")>
+Traceback (most recent call last):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 414, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 236, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 257, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Samangelof\Desktop\collection_dispatch\bot\handlers\main_handler.py", line 333, in process_client_phone
+    await UnconfirmedRequestStates.WAITING_FOR_ADDITIONAL_INFO.set()
+AttributeError: type object 'UnconfirmedRequestStates' has no attribute 'WAITING_FOR_ADDITIONAL_INFO'
+2024-12-21 01:28:37,761 - INFO - [FINAL] process_client_phone={'request_id': 3, 'manager_id': 3, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': 'rfdsfe2', 'client_age': 23, 'procedure_name': 'dfdsf', 'procedure_date': 'e2', 'procedure_time': 'новая заявка', 'client_phone': 'Новая заявка'}
+2024-12-21 01:28:47,050 - INFO - process_request_type_selection_data={"message_id": 6998, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734733726, "text": "Назад"}
+2024-12-21 01:28:47,311 - INFO - process_salon_selection_data={"message_id": 7000, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734733727, "text": "Назад"}
+2024-12-21 01:28:47,572 - INFO - process_manager_name_data={"message_id": 7003, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734733727, "text": "Назад"}
+2024-12-21 01:28:47,573 - INFO - Менеджер с именем Назад не найден.
+2024-12-21 01:28:48,217 - INFO - process_manager_name_data={"message_id": 7005, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734733727, "text": "Сидрах"}
+2024-12-21 01:28:49,506 - INFO - process_salon_selection_data={"message_id": 7007, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734733729, "text": "Назад"}
+2024-12-21 01:28:53,381 - WARNING - Polling is stopped.
+2024-12-21 01:28:53,441 - INFO - Stop polling...
+2024-12-21 19:49:02,060 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x00000230E7A59840>
+2024-12-21 19:49:02,065 - INFO - Start polling.
+2024-12-21 19:49:13,168 - INFO - start_command_data={"message_id": 7009, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734799752, "text": "/start", "entities": [{"type": "bot_command", "offset": 0, "length": 6}]}
+2024-12-21 19:49:14,531 - INFO - process_manager_name_data={"message_id": 7011, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734799754, "text": "Сеной"}
+2024-12-21 19:49:16,666 - INFO - process_salon_selection_data={"message_id": 7013, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734799756, "text": "Kedma luxury spa"}
+2024-12-21 19:49:16,667 - INFO - Выбран салон: Kedma luxury spa. Продолжаем...
+2024-12-21 19:49:19,320 - INFO - process_request_type_selection_data={"message_id": 7015, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734799759, "text": "Подтвержденная"}
+2024-12-21 19:49:19,322 - INFO - Выбран тип заявки: Подтвержденная. Продолжаем...
+2024-12-21 19:50:12,200 - INFO - [FINAL] process_client_phone={'request_id': 5, 'manager_id': 1, 'salon_name': 'Kedma luxury spa', 'request_type': 'Подтвержденная', 'client_name': 'Derek', 'client_age': 26, 'procedure_name': 'Очистка AR-15', 'procedure_date': '19.02.2025', 'procedure_time': '10:00'}
+2024-12-21 19:50:25,526 - INFO - restart_command=None
+2024-12-21 19:51:56,874 - WARNING - Polling is stopped.
+2024-12-21 19:51:56,963 - INFO - Stop polling...
+2024-12-21 19:52:02,594 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x000001F796209810>
+2024-12-21 19:52:02,598 - INFO - Start polling.
+2024-12-21 19:52:08,143 - INFO - start_command_data={"message_id": 7040, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734799927, "text": "/start", "entities": [{"type": "bot_command", "offset": 0, "length": 6}]}
+2024-12-21 19:52:08,150 - INFO - Список пользователей пуст!
+2024-12-21 19:52:14,357 - INFO - {"message_id": 7042, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734799934, "text": "/admin", "entities": [{"type": "bot_command", "offset": 0, "length": 6}]}
+2024-12-21 19:52:14,360 - INFO - Pandemonium
+2024-12-21 19:53:25,226 - INFO - start_command_data={"message_id": 7065, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734800005, "text": "/start", "entities": [{"type": "bot_command", "offset": 0, "length": 6}]}
+2024-12-21 19:53:28,659 - INFO - process_manager_name_data={"message_id": 7067, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734800008, "text": "Сеной"}
+2024-12-21 19:53:30,295 - INFO - process_salon_selection_data={"message_id": 7069, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734800010, "text": "Kedma luxury spa"}
+2024-12-21 19:53:30,297 - INFO - Выбран салон: Kedma luxury spa. Продолжаем...
+2024-12-21 19:53:33,201 - INFO - process_request_type_selection_data={"message_id": 7071, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734800013, "text": "Подтвержденная"}
+2024-12-21 19:53:33,202 - INFO - Выбран тип заявки: Подтвержденная. Продолжаем...
+2024-12-21 19:54:14,734 - INFO - [FINAL] process_client_phone={'request_id': 1, 'manager_id': 1, 'salon_name': 'Kedma luxury spa', 'request_type': 'Подтвержденная', 'client_name': 'Дерек', 'client_age': 12, 'procedure_name': 'экзорцизм', 'procedure_date': '06.06.2026', 'procedure_time': '06.06'}
+2024-12-21 19:54:31,341 - INFO - restart_command=None
+2024-12-21 19:54:46,895 - INFO - process_manager_name_data={"message_id": 7091, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734800086, "text": "Сансеной"}
+2024-12-21 19:55:08,261 - INFO - process_salon_selection_data={"message_id": 7093, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734800108, "text": "Fashiontv Studio"}
+2024-12-21 19:55:08,262 - INFO - Выбран салон: Fashiontv Studio. Продолжаем...
+2024-12-21 19:55:09,792 - INFO - process_request_type_selection_data={"message_id": 7095, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734800109, "text": "Не готовая"}
+2024-12-21 19:55:09,793 - INFO - Выбран тип заявки: Не готовая. Продолжаем...
+2024-12-21 19:55:30,270 - INFO - [FINAL] process_client_phone={'request_id': 2, 'manager_id': 2, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': 'Дерек', 'client_age': 12, 'procedure_name': 'Экзорцизм', 'procedure_date': '12 02 25', 'procedure_time': '12 00'}
+2024-12-21 19:55:30,274 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-140' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py:406> exception=TypeError('process_unconfirmed_request() takes 2 positional arguments but 3 were given')>
+Traceback (most recent call last):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 414, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 236, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 257, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Samangelof\Desktop\collection_dispatch\bot\handlers\main_handler.py", line 331, in process_client_phone
+    await process_unconfirmed_request(message, state, db)
+TypeError: process_unconfirmed_request() takes 2 positional arguments but 3 were given
+2024-12-21 19:56:12,806 - WARNING - Polling is stopped.
+2024-12-21 19:56:12,906 - INFO - Stop polling...
+2024-12-21 21:19:57,190 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x000001A975A89810>
+2024-12-21 21:19:57,198 - INFO - Start polling.
+2024-12-21 21:20:12,206 - INFO - start_command_data={"message_id": 7109, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805211, "text": "/start", "entities": [{"type": "bot_command", "offset": 0, "length": 6}]}
+2024-12-21 21:20:15,379 - INFO - process_manager_name_data={"message_id": 7111, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805214, "text": "Сеной"}
+2024-12-21 21:20:16,764 - INFO - process_salon_selection_data={"message_id": 7113, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805215, "text": "Kedma luxury spa"}
+2024-12-21 21:20:16,765 - INFO - Выбран салон: Kedma luxury spa. Продолжаем...
+2024-12-21 21:20:17,619 - INFO - process_request_type_selection_data={"message_id": 7115, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805216, "text": "Подтвержденная"}
+2024-12-21 21:20:17,620 - INFO - Выбран тип заявки: Подтвержденная. Продолжаем...
+2024-12-21 21:20:41,561 - INFO - [FINAL] process_client_phone={'request_id': 3, 'manager_id': 1, 'salon_name': 'Kedma luxury spa', 'request_type': 'Подтвержденная', 'client_name': 'Дерек', 'client_age': 12, 'procedure_name': 'экзорцизм', 'procedure_date': '-6к', 'procedure_time': '4к'}
+2024-12-21 21:21:06,363 - INFO - restart_command=None
+2024-12-21 21:21:08,213 - INFO - process_manager_name_data={"message_id": 7136, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805267, "text": "Сансеной"}
+2024-12-21 21:21:09,660 - INFO - process_salon_selection_data={"message_id": 7138, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805268, "text": "Fashiontv Studio"}
+2024-12-21 21:21:09,661 - INFO - Выбран салон: Fashiontv Studio. Продолжаем...
+2024-12-21 21:21:10,849 - INFO - process_request_type_selection_data={"message_id": 7140, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805269, "text": "Не готовая"}
+2024-12-21 21:21:10,852 - INFO - Выбран тип заявки: Не готовая. Продолжаем...
+2024-12-21 21:21:28,944 - INFO - [FINAL] process_client_phone={'request_id': 4, 'manager_id': 2, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': 'Tomas', 'client_age': 222, 'procedure_name': 'ПРок', 'procedure_date': '234 324', 'procedure_time': 'ыва'}
+2024-12-21 21:23:20,709 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-117' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py:406> exception=UnboundLocalError("local variable 'response' referenced before assignment")>
+Traceback (most recent call last):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 414, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 236, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 257, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Samangelof\Desktop\collection_dispatch\bot\handlers\unconfirmed_handler.py", line 153, in process_final_confirmation
+    f"✅ Скрипт для клиента:\n\n{response}",
+UnboundLocalError: local variable 'response' referenced before assignment
+2024-12-21 21:23:27,988 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-128' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py:406> exception=UnboundLocalError("local variable 'response' referenced before assignment")>
+Traceback (most recent call last):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 414, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 236, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 257, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Samangelof\Desktop\collection_dispatch\bot\handlers\unconfirmed_handler.py", line 153, in process_final_confirmation
+    f"✅ Скрипт для клиента:\n\n{response}",
+UnboundLocalError: local variable 'response' referenced before assignment
+2024-12-21 21:23:32,662 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-139' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py:406> exception=UnboundLocalError("local variable 'response' referenced before assignment")>
+Traceback (most recent call last):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 414, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 236, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 257, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Samangelof\Desktop\collection_dispatch\bot\handlers\unconfirmed_handler.py", line 153, in process_final_confirmation
+    f"✅ Скрипт для клиента:\n\n{response}",
+UnboundLocalError: local variable 'response' referenced before assignment
+2024-12-21 21:26:00,691 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x0000015546EA9840>
+2024-12-21 21:26:00,696 - INFO - Start polling.
+2024-12-21 21:26:22,379 - INFO - start_command_data={"message_id": 7175, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805581, "text": "/start", "entities": [{"type": "bot_command", "offset": 0, "length": 6}]}
+2024-12-21 21:26:23,860 - INFO - process_manager_name_data={"message_id": 7177, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805582, "text": "Сансеной"}
+2024-12-21 21:26:25,034 - INFO - process_salon_selection_data={"message_id": 7179, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805583, "text": "Fashiontv Studio"}
+2024-12-21 21:26:25,035 - INFO - Выбран салон: Fashiontv Studio. Продолжаем...
+2024-12-21 21:26:25,806 - INFO - process_request_type_selection_data={"message_id": 7181, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805584, "text": "Не готовая"}
+2024-12-21 21:26:25,809 - INFO - Выбран тип заявки: Не готовая. Продолжаем...
+2024-12-21 21:26:35,953 - INFO - [FINAL] process_client_phone={'request_id': 5, 'manager_id': 2, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': 'gdfg', 'client_age': 23, 'procedure_name': '4fdgfgdf', 'procedure_date': '4', 'procedure_time': '34'}
+2024-12-21 21:29:02,032 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x000002113DF297B0>
+2024-12-21 21:29:02,039 - INFO - Start polling.
+2024-12-21 21:29:04,459 - INFO - start_command_data={"message_id": 7195, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805743, "text": "/start", "entities": [{"type": "bot_command", "offset": 0, "length": 6}]}
+2024-12-21 21:29:05,822 - INFO - process_manager_name_data={"message_id": 7197, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805744, "text": "Сансеной"}
+2024-12-21 21:29:07,163 - INFO - process_salon_selection_data={"message_id": 7199, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805745, "text": "Fashiontv Studio"}
+2024-12-21 21:29:07,164 - INFO - Выбран салон: Fashiontv Studio. Продолжаем...
+2024-12-21 21:29:07,975 - INFO - process_request_type_selection_data={"message_id": 7201, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805746, "text": "Не готовая"}
+2024-12-21 21:29:07,977 - INFO - Выбран тип заявки: Не готовая. Продолжаем...
+2024-12-21 21:29:17,982 - INFO - [FINAL] process_client_phone={'request_id': 6, 'manager_id': 2, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': 'ASd', 'client_age': 123, 'procedure_name': '133', 'procedure_date': 'fdsfd', 'procedure_time': '23rfds'}
+2024-12-21 21:29:19,971 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-45' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py:406> exception=TypeError("process_unconfirmed_request() missing 1 required positional argument: 'db'")>
+Traceback (most recent call last):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 414, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 236, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 257, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Samangelof\Desktop\collection_dispatch\bot\states\register_state.py", line 87, in <lambda>
+    dp.register_message_handler(lambda message, state: process_unconfirmed_request(
+TypeError: process_unconfirmed_request() missing 1 required positional argument: 'db'
+2024-12-21 21:30:17,538 - WARNING - Polling is stopped.
+2024-12-21 21:30:17,754 - INFO - Stop polling...
+2024-12-21 21:30:20,313 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x00000193322E97E0>
+2024-12-21 21:30:20,317 - INFO - Start polling.
+2024-12-21 21:30:23,525 - INFO - start_command_data={"message_id": 7216, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805822, "text": "/start", "entities": [{"type": "bot_command", "offset": 0, "length": 6}]}
+2024-12-21 21:30:24,611 - INFO - process_manager_name_data={"message_id": 7218, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805823, "text": "Сансеной"}
+2024-12-21 21:30:25,777 - INFO - process_salon_selection_data={"message_id": 7220, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805824, "text": "Fashiontv Studio"}
+2024-12-21 21:30:25,778 - INFO - Выбран салон: Fashiontv Studio. Продолжаем...
+2024-12-21 21:30:27,407 - INFO - process_request_type_selection_data={"message_id": 7222, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734805826, "text": "Не готовая"}
+2024-12-21 21:30:27,408 - INFO - Выбран тип заявки: Не готовая. Продолжаем...
+2024-12-21 21:30:38,817 - INFO - [FINAL] process_client_phone={'request_id': 7, 'manager_id': 2, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': 'fdsfsdf', 'client_age': 23, 'procedure_name': 'dfgdf', 'procedure_date': '43', 'procedure_time': 'gfdg'}
+2024-12-21 22:06:49,888 - WARNING - Polling is stopped.
+2024-12-21 22:06:49,984 - INFO - Stop polling...
+2024-12-21 22:08:37,904 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x000001B328D59870>
+2024-12-21 22:08:37,909 - INFO - Start polling.
+2024-12-21 22:08:40,450 - INFO - start_command_data={"message_id": 7244, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734808118, "text": "/start", "entities": [{"type": "bot_command", "offset": 0, "length": 6}]}
+2024-12-21 22:08:41,940 - INFO - process_manager_name_data={"message_id": 7246, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734808120, "text": "Сансеной"}
+2024-12-21 22:08:42,959 - INFO - process_salon_selection_data={"message_id": 7248, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734808121, "text": "Fashiontv Studio"}
+2024-12-21 22:08:42,960 - INFO - Выбран салон: Fashiontv Studio. Продолжаем...
+2024-12-21 22:08:43,608 - INFO - process_request_type_selection_data={"message_id": 7250, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734808122, "text": "Не готовая"}
+2024-12-21 22:08:43,609 - INFO - Выбран тип заявки: Не готовая. Продолжаем...
+2024-12-21 22:08:51,262 - INFO - [FINAL] process_client_phone={'request_id': 8, 'manager_id': 2, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': 'dfgdfg', 'client_age': 43, 'procedure_name': 'gdgf', 'procedure_date': '34', 'procedure_time': '324'}
+2024-12-21 22:08:52,981 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-45' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py:406> exception=TypeError('process_language_choice() takes 2 positional arguments but 3 were given')>
+Traceback (most recent call last):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 414, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 236, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 257, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Samangelof\Desktop\collection_dispatch\bot\states\register_state.py", line 87, in <lambda>
+    dp.register_message_handler(lambda message, state, db=db: process_language_choice(
+TypeError: process_language_choice() takes 2 positional arguments but 3 were given
+2024-12-21 22:09:09,980 - WARNING - Polling is stopped.
+2024-12-21 22:09:10,072 - INFO - Stop polling...
+2024-12-21 22:09:12,958 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x0000022442FB97E0>
+2024-12-21 22:09:12,962 - INFO - Start polling.
+2024-12-21 22:09:17,775 - INFO - start_command_data={"message_id": 7265, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734808156, "text": "/start", "entities": [{"type": "bot_command", "offset": 0, "length": 6}]}
+2024-12-21 22:09:19,798 - INFO - process_manager_name_data={"message_id": 7267, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734808158, "text": "Сансеной"}
+2024-12-21 22:09:21,408 - INFO - process_salon_selection_data={"message_id": 7269, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734808159, "text": "Fashiontv Studio"}
+2024-12-21 22:09:21,409 - INFO - Выбран салон: Fashiontv Studio. Продолжаем...
+2024-12-21 22:09:22,536 - INFO - process_request_type_selection_data={"message_id": 7271, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734808161, "text": "Не готовая"}
+2024-12-21 22:09:22,538 - INFO - Выбран тип заявки: Не готовая. Продолжаем...
+2024-12-21 22:10:51,020 - INFO - [FINAL] process_client_phone={'request_id': 9, 'manager_id': 2, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': 'dsfgfdg', 'client_age': 3434, 'procedure_name': 'fdsf', 'procedure_date': '888', 'procedure_time': '12'}
+2024-12-21 22:11:48,386 - INFO - restart_command=None
+2024-12-21 22:11:50,147 - INFO - process_manager_name_data={"message_id": 7294, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734808308, "text": "Самангелоф"}
+2024-12-21 22:11:51,193 - INFO - process_salon_selection_data={"message_id": 7296, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734808309, "text": "Fashiontv Studio"}
+2024-12-21 22:11:51,194 - INFO - Выбран салон: Fashiontv Studio. Продолжаем...
+2024-12-21 22:11:53,743 - INFO - process_request_type_selection_data={"message_id": 7298, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734808312, "text": "Не готовая"}
+2024-12-21 22:11:53,745 - INFO - Выбран тип заявки: Не готовая. Продолжаем...
+2024-12-21 22:12:07,092 - INFO - [FINAL] process_client_phone={'request_id': 10, 'manager_id': 3, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': 'ыс', 'client_age': 0, 'procedure_name': 'ос', 'procedure_date': '2', 'procedure_time': '10'}
+2024-12-21 22:12:48,896 - INFO - restart_command=None
+2024-12-21 22:12:51,042 - INFO - process_manager_name_data={"message_id": 7323, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734808369, "text": "Сеной"}
+2024-12-21 22:12:54,083 - INFO - process_salon_selection_data={"message_id": 7325, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734808372, "text": "Kedma luxury spa"}
+2024-12-21 22:12:54,084 - INFO - Выбран салон: Kedma luxury spa. Продолжаем...
+2024-12-21 22:12:56,068 - INFO - process_request_type_selection_data={"message_id": 7327, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734808374, "text": "Не готовая"}
+2024-12-21 22:12:56,069 - INFO - Выбран тип заявки: Не готовая. Продолжаем...
+2024-12-21 22:13:11,151 - INFO - [FINAL] process_client_phone={'request_id': 11, 'manager_id': 1, 'salon_name': 'Kedma luxury spa', 'request_type': 'Не готовая', 'client_name': 'хуй', 'client_age': 12, 'procedure_name': 'авыа', 'procedure_date': '3232 322', 'procedure_time': 'аввыа'}
+2024-12-21 22:17:23,997 - WARNING - Polling is stopped.
+2024-12-21 22:17:24,089 - INFO - Stop polling...
+2024-12-21 22:17:25,099 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x00000261E4A097B0>
+2024-12-21 22:17:25,107 - INFO - Start polling.
+2024-12-21 22:17:29,902 - INFO - start_command_data={"message_id": 7361, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734808648, "text": "/start", "entities": [{"type": "bot_command", "offset": 0, "length": 6}]}
+2024-12-21 22:17:31,410 - INFO - process_manager_name_data={"message_id": 7363, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734808649, "text": "Самангелоф"}
+2024-12-21 22:17:32,491 - INFO - process_salon_selection_data={"message_id": 7365, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734808650, "text": "Fashiontv Studio"}
+2024-12-21 22:17:32,492 - INFO - Выбран салон: Fashiontv Studio. Продолжаем...
+2024-12-21 22:17:33,245 - INFO - process_request_type_selection_data={"message_id": 7367, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734808651, "text": "Не готовая"}
+2024-12-21 22:17:33,247 - INFO - Выбран тип заявки: Не готовая. Продолжаем...
+2024-12-21 22:17:39,699 - INFO - [FINAL] process_client_phone={'request_id': 12, 'manager_id': 3, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': 'пав', 'client_age': 324, 'procedure_name': 'павпвап', 'procedure_date': '45', 'procedure_time': 'павп'}
+2024-12-21 22:25:06,216 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x000001F5981598A0>
+2024-12-21 22:25:06,222 - INFO - Start polling.
+2024-12-21 22:26:28,529 - INFO - restart_command=None
+2024-12-21 22:26:29,271 - INFO - process_manager_name_data={"message_id": 7410, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734809187, "text": "Сансеной"}
+2024-12-21 22:26:30,086 - INFO - process_salon_selection_data={"message_id": 7412, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734809188, "text": "Fashiontv Studio"}
+2024-12-21 22:26:30,089 - INFO - Выбран салон: Fashiontv Studio. Продолжаем...
+2024-12-21 22:26:30,613 - INFO - process_request_type_selection_data={"message_id": 7414, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734809188, "text": "Не готовая"}
+2024-12-21 22:26:30,616 - INFO - Выбран тип заявки: Не готовая. Продолжаем...
+2024-12-21 22:26:40,542 - INFO - [FINAL] process_client_phone={'request_id': 13, 'manager_id': 2, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': '54353папав', 'client_age': 4344, 'procedure_name': '34апап', 'procedure_date': 'п444', 'procedure_time': '444'}
+2024-12-21 22:27:23,690 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-69' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py:406> exception=TypeError("process_rejection_reason() missing 1 required positional argument: 'db'")>
+Traceback (most recent call last):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 414, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 236, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 257, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Samangelof\Desktop\collection_dispatch\bot\states\register_state.py", line 99, in <lambda>
+    dp.register_message_handler(lambda message, state: process_rejection_reason(
+TypeError: process_rejection_reason() missing 1 required positional argument: 'db'
+2024-12-21 22:27:50,252 - WARNING - Polling is stopped.
+2024-12-21 22:27:50,358 - INFO - Stop polling...
+2024-12-21 22:27:51,854 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x000001F106D997E0>
+2024-12-21 22:27:51,858 - INFO - Start polling.
+2024-12-21 22:28:01,645 - WARNING - Polling is stopped.
+2024-12-21 22:28:01,733 - INFO - Stop polling...
+2024-12-21 22:28:04,429 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x00000245E3079870>
+2024-12-21 22:28:04,437 - INFO - Start polling.
+2024-12-21 22:28:07,964 - INFO - start_command_data={"message_id": 7437, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734809286, "text": "/start", "entities": [{"type": "bot_command", "offset": 0, "length": 6}]}
+2024-12-21 22:28:09,784 - INFO - process_manager_name_data={"message_id": 7439, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734809288, "text": "Сеной"}
+2024-12-21 22:28:11,198 - INFO - process_salon_selection_data={"message_id": 7441, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734809289, "text": "Fashiontv Studio"}
+2024-12-21 22:28:11,200 - INFO - Выбран салон: Fashiontv Studio. Продолжаем...
+2024-12-21 22:28:15,982 - INFO - process_request_type_selection_data={"message_id": 7443, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734809294, "text": "Не готовая"}
+2024-12-21 22:28:15,984 - INFO - Выбран тип заявки: Не готовая. Продолжаем...
+2024-12-21 22:28:27,077 - INFO - [FINAL] process_client_phone={'request_id': 14, 'manager_id': 1, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': '123321', 'client_age': 12312, 'procedure_name': '213123', 'procedure_date': '123233', 'procedure_time': '23213231'}
+2024-12-21 22:29:16,342 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-67' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py:406> exception=TypeError("process_rejection_reason() missing 1 required positional argument: 'db'")>
+Traceback (most recent call last):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 414, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 236, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 257, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Samangelof\Desktop\collection_dispatch\env\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Samangelof\Desktop\collection_dispatch\bot\states\register_state.py", line 99, in <lambda>
+    dp.register_message_handler(lambda message, state, db=db: process_rejection_reason(
+TypeError: process_rejection_reason() missing 1 required positional argument: 'db'
+2024-12-21 22:29:27,153 - WARNING - Polling is stopped.
+2024-12-21 22:29:27,245 - INFO - Stop polling...
+2024-12-21 22:29:28,467 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x000002A9BB2898D0>
+2024-12-21 22:29:28,473 - INFO - Start polling.
+2024-12-21 22:29:31,552 - INFO - start_command_data={"message_id": 7468, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734809369, "text": "/start", "entities": [{"type": "bot_command", "offset": 0, "length": 6}]}
+2024-12-21 22:29:33,409 - INFO - process_manager_name_data={"message_id": 7470, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734809371, "text": "Сансеной"}
+2024-12-21 22:29:34,167 - INFO - process_salon_selection_data={"message_id": 7472, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734809372, "text": "Fashiontv Studio"}
+2024-12-21 22:29:34,170 - INFO - Выбран салон: Fashiontv Studio. Продолжаем...
+2024-12-21 22:29:34,984 - INFO - process_request_type_selection_data={"message_id": 7474, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734809373, "text": "Не готовая"}
+2024-12-21 22:29:34,987 - INFO - Выбран тип заявки: Не готовая. Продолжаем...
+2024-12-21 22:29:39,462 - INFO - [FINAL] process_client_phone={'request_id': 15, 'manager_id': 2, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': '3423', 'client_age': 4234, 'procedure_name': '324', 'procedure_date': '324', 'procedure_time': '234'}
+2024-12-21 22:30:14,672 - WARNING - Polling is stopped.
+2024-12-21 22:30:14,768 - INFO - Stop polling...
+2024-12-21 22:30:16,653 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x00000289C70397E0>
+2024-12-21 22:30:16,658 - INFO - Start polling.
+2024-12-21 22:30:17,697 - WARNING - Polling is stopped.
+2024-12-21 22:30:17,793 - INFO - Stop polling...
+2024-12-21 22:36:11,700 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x0000022B8E8097E0>
+2024-12-21 22:36:11,704 - INFO - Start polling.
+2024-12-21 22:36:16,026 - INFO - start_command_data={"message_id": 7508, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734809774, "text": "/start", "entities": [{"type": "bot_command", "offset": 0, "length": 6}]}
+2024-12-21 22:36:18,044 - INFO - process_manager_name_data={"message_id": 7510, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734809776, "text": "Сансеной"}
+2024-12-21 22:36:19,421 - INFO - process_salon_selection_data={"message_id": 7512, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734809777, "text": "Fashiontv Studio"}
+2024-12-21 22:36:19,424 - INFO - Выбран салон: Fashiontv Studio. Продолжаем...
+2024-12-21 22:36:20,083 - INFO - process_request_type_selection_data={"message_id": 7514, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734809778, "text": "Не готовая"}
+2024-12-21 22:36:20,084 - INFO - Выбран тип заявки: Не готовая. Продолжаем...
+2024-12-21 22:36:33,157 - INFO - [FINAL] process_client_phone={'request_id': 16, 'manager_id': 2, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': 'asd', 'client_age': 12, 'procedure_name': '32131', 'procedure_date': 'sfdsf', 'procedure_time': '12312'}
+2024-12-21 22:37:17,625 - INFO - [FINAL] process_rejection_reason={'request_id': 16, 'manager_id': 2, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': 'asd', 'client_age': 12, 'procedure_name': '32131', 'procedure_date': 'sfdsf', 'procedure_time': '12312', 'client_phone': '123123', 'manager_name': 'Сансеной', 'language': 'Русский', 'rejection_reason': 'хуй'}
+2024-12-21 22:37:21,117 - INFO - restart_command=None
+2024-12-21 22:37:33,118 - WARNING - Polling is stopped.
+2024-12-21 22:37:33,154 - INFO - Stop polling...
+2024-12-21 22:39:16,938 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x0000027513329840>
+2024-12-21 22:39:16,942 - INFO - Start polling.
+2024-12-21 22:39:26,881 - WARNING - Polling is stopped.
+2024-12-21 22:39:26,977 - INFO - Stop polling...
+2024-12-21 22:55:44,580 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x0000027357C59810>
+2024-12-21 22:55:44,584 - INFO - Start polling.
+2024-12-21 22:56:31,067 - INFO - start_command_data={"message_id": 7565, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734810989, "text": "/start", "entities": [{"type": "bot_command", "offset": 0, "length": 6}]}
+2024-12-21 22:56:33,461 - INFO - process_manager_name_data={"message_id": 7567, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734810991, "text": "Самангелоф"}
+2024-12-21 22:56:34,638 - INFO - process_salon_selection_data={"message_id": 7569, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734810992, "text": "Fashiontv Studio"}
+2024-12-21 22:56:34,640 - INFO - Выбран салон: Fashiontv Studio. Продолжаем...
+2024-12-21 22:56:40,369 - INFO - process_request_type_selection_data={"message_id": 7571, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734810998, "text": "Не готовая"}
+2024-12-21 22:56:40,372 - INFO - Выбран тип заявки: Не готовая. Продолжаем...
+2024-12-21 22:56:54,725 - INFO - [FINAL] process_client_phone={'request_id': 17, 'manager_id': 3, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': 'asd', 'client_age': 12, 'procedure_name': 'dsa', 'procedure_date': '333 33 333', 'procedure_time': '12 21'}
+2024-12-21 22:57:10,396 - INFO - [FINAL] process_rejection_reason={'request_id': 17, 'manager_id': 3, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': 'asd', 'client_age': 12, 'procedure_name': 'dsa', 'procedure_date': '333 33 333', 'procedure_time': '12 21', 'client_phone': '877775554433', 'manager_name': 'Самангелоф', 'language': 'Русский', 'rejection_reason': 'нытик'}
+2024-12-21 22:57:13,618 - INFO - restart_command=None
+2024-12-21 22:57:14,909 - INFO - process_manager_name_data={"message_id": 7601, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734811033, "text": "Сеной"}
+2024-12-21 22:57:15,911 - INFO - process_salon_selection_data={"message_id": 7603, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734811034, "text": "Kedma luxury spa"}
+2024-12-21 22:57:15,912 - INFO - Выбран салон: Kedma luxury spa. Продолжаем...
+2024-12-21 22:57:16,724 - INFO - process_request_type_selection_data={"message_id": 7605, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734811034, "text": "Подтвержденная"}
+2024-12-21 22:57:16,726 - INFO - Выбран тип заявки: Подтвержденная. Продолжаем...
+2024-12-21 22:57:32,415 - INFO - [FINAL] process_client_phone={'request_id': 18, 'manager_id': 1, 'salon_name': 'Kedma luxury spa', 'request_type': 'Подтвержденная', 'client_name': '1', 'client_age': 23, 'procedure_name': 'авы', 'procedure_date': '12 12', 'procedure_time': '12 21'}
+2024-12-21 22:57:38,950 - INFO - restart_command=None
+2024-12-21 22:57:40,819 - INFO - process_manager_name_data={"message_id": 7626, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734811058, "text": "Самангелоф"}
+2024-12-21 22:57:41,922 - INFO - process_salon_selection_data={"message_id": 7628, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734811060, "text": "Fashiontv Studio"}
+2024-12-21 22:57:41,923 - INFO - Выбран салон: Fashiontv Studio. Продолжаем...
+2024-12-21 22:57:44,679 - INFO - process_request_type_selection_data={"message_id": 7630, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734811062, "text": "Не готовая"}
+2024-12-21 22:57:44,681 - INFO - Выбран тип заявки: Не готовая. Продолжаем...
+2024-12-21 22:58:29,082 - INFO - [FINAL] process_client_phone={'request_id': 19, 'manager_id': 3, 'salon_name': 'Fashiontv Studio', 'request_type': 'Не готовая', 'client_name': 'Chinazes', 'client_age': 12, 'procedure_name': 'asdffds', 'procedure_date': '2 2 211', 'procedure_time': '12 00'}
+2024-12-21 22:59:03,521 - WARNING - Polling is stopped.
+2024-12-21 22:59:03,569 - INFO - Stop polling...
+2024-12-21 23:01:44,386 - INFO - DB instance: <database.sqlite_db.DatabaseManager object at 0x000001E9715D98D0>
+2024-12-21 23:01:44,390 - INFO - Start polling.
+2024-12-21 23:01:46,848 - INFO - restart_command=None
+2024-12-21 23:01:50,195 - INFO - process_manager_name_data={"message_id": 7658, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734811308, "text": "Сансеной"}
+2024-12-21 23:01:51,466 - INFO - process_salon_selection_data={"message_id": 7660, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734811309, "text": "Kedma luxury spa"}
+2024-12-21 23:01:51,467 - INFO - Выбран салон: Kedma luxury spa. Продолжаем...
+2024-12-21 23:01:57,578 - INFO - process_request_type_selection_data={"message_id": 7662, "from": {"id": 783067394, "is_bot": false, "first_name": "Pandemonium", "username": "perseverantius", "language_code": "ru"}, "chat": {"id": 783067394, "first_name": "Pandemonium", "username": "perseverantius", "type": "private"}, "date": 1734811315, "text": "Не готовая"}
+2024-12-21 23:01:57,580 - INFO - Выбран тип заявки: Не готовая. Продолжаем...
+2024-12-21 23:03:29,478 - INFO - [FINAL] process_client_phone={'request_id': 20, 'manager_id': 2, 'salon_name': 'Kedma luxury spa', 'request_type': 'Не готовая', 'client_name': 'cheas', 'client_age': 2, 'procedure_name': 'фыв', 'procedure_date': '23', 'procedure_time': '232'}
+2024-12-21 23:04:23,312 - WARNING - Polling is stopped.
+2024-12-21 23:04:23,416 - INFO - Stop polling...

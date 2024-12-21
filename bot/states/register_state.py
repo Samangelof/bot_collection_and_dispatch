@@ -1,6 +1,11 @@
 from aiogram import Dispatcher
 from database.sqlite_db import DatabaseManager
-from bot.states.all_states import AdminStates, GeneralStates, ConfirmedRequestStates
+from bot.states.all_states import (
+    AdminStates,
+    GeneralStates,
+    ConfirmedRequestStates,
+    UnconfirmedRequestStates
+)
 from bot.handlers.admin_commands import (
     admin_command,
     process_admin_action,
@@ -18,6 +23,7 @@ from bot.handlers.main_handler import (
     process_procedure_date,
     process_procedure_time,
     process_client_phone,
+    restart_command
 )
 from bot.handlers.confirmed_handler import (
     process_clarification,
@@ -25,6 +31,13 @@ from bot.handlers.confirmed_handler import (
     process_final_decision,
     process_rejection_reason
 )
+from bot.handlers.unconfirmed_handler import (
+    process_language_choice,
+    process_initial_response,
+    process_objection_response,
+    process_final_confirmation
+)
+from functools import partial
 
 
 def register_handlers(dp: Dispatcher, db: DatabaseManager):
@@ -51,8 +64,13 @@ def register_handlers(dp: Dispatcher, db: DatabaseManager):
     dp.register_message_handler(lambda message, state, db=db: process_client_phone(
         message, state, db), state=GeneralStates.WAITING_FOR_CLIENT_PHONE)
 
+    dp.register_message_handler(
+        partial(restart_command, db=db),
+        lambda message: message.text == 'Новая заявка',
+        state='*'
+    )
 
-    # == Подтвержденные заявки
+    # == Подтвержденные заявки ==
     dp.register_message_handler(lambda message, state, db=db: process_confirmation_answer(
         message, state, db), state=ConfirmedRequestStates.WAITING_FOR_CONFIRMATION_ANSWER)
 
@@ -65,7 +83,21 @@ def register_handlers(dp: Dispatcher, db: DatabaseManager):
     dp.register_message_handler(lambda message, state, db=db: process_rejection_reason(
         message, state, db), state=ConfirmedRequestStates.WAITING_FOR_REJECTION_REASON)
 
-
+    # == Неподтвержденные заявки == 
+    dp.register_message_handler(lambda message, state, db=db: process_language_choice(
+        message, state, db), state=UnconfirmedRequestStates.WAITING_FOR_LANGUAGE_CHOICE)
+    
+    dp.register_message_handler(lambda message, state: process_initial_response(
+        message, state), state=UnconfirmedRequestStates.WAITING_FOR_INITIAL_RESPONSE)
+    
+    dp.register_message_handler(lambda message, state: process_objection_response(
+        message, state), state=UnconfirmedRequestStates.WAITING_FOR_OBJECTION_RESPONSE)
+    
+    dp.register_message_handler(lambda message, state, db=db: process_final_confirmation(
+        message, state, db), state=UnconfirmedRequestStates.WAITING_FOR_FINAL_CONFIRMATION)
+    
+    dp.register_message_handler(lambda message, state, db=db: process_rejection_reason(
+        message, state, db), state=UnconfirmedRequestStates.WAITING_FOR_REJECTION_REASON)
 
     # == Админ ==
     dp.register_message_handler(lambda message, state, db=db: process_admin_action(

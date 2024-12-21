@@ -21,7 +21,6 @@ async def admin_command(message: types.Message, state: FSMContext):
         await message.answer("❌У вас нет прав для выполнения этой команды.")
         return
 
-    # Переход в режим администратора
     await message.answer(
         f"Вы вошли в режим администратора, {name}.\nВыберите действие:",
         reply_markup=types.ReplyKeyboardMarkup(
@@ -39,11 +38,9 @@ async def admin_command(message: types.Message, state: FSMContext):
 async def process_admin_action(message: types.Message, state: FSMContext, db: DatabaseManager):
     """Обработка выбора действия администратора."""
     if message.text == "Добавить имя":
-        # Убираем клавиатуру, чтобы предотвратить случайный ввод кнопки
         await message.answer("Введите имя нового пользователя:", reply_markup=ReplyKeyboardRemove())
         await AdminStates.WAITING_FOR_NEW_USER_NAME.set()
     elif message.text == "Удалить имя":
-        # Создаем кнопки для выбора имени
         users = db.get_managers()
         if not users:
             await message.answer("Список пользователей пуст. Удалять некого.")
@@ -68,7 +65,6 @@ async def process_new_user_name(message: types.Message, state: FSMContext, db: D
     user_name = message.text
     await state.update_data(name=user_name)
 
-    # Добавление пользователя в базу данных
     success = db.add_person(name=user_name)
 
     if success:
@@ -76,7 +72,6 @@ async def process_new_user_name(message: types.Message, state: FSMContext, db: D
     else:
         await message.answer(f"❌ Произошла ошибка при добавлении пользователя {user_name}.")
 
-    # Возврат в меню действий администратора
     await message.answer(
         "Выберите следующее действие:",
         reply_markup=types.ReplyKeyboardMarkup(
@@ -117,7 +112,6 @@ async def process_delete_user_name(message: types.Message, state: FSMContext, db
     else:
         await message.answer(f"❌ Пользователь с именем {user_name} не найден.")
 
-    # Возврат в меню действий администратора
     await message.answer(
         "Выберите следующее действие:",
         reply_markup=types.ReplyKeyboardMarkup(
